@@ -1,16 +1,12 @@
-public class Hexagono extends figuras_geometricas
+public class Hexagono extends FigurasGeo
 {
     Double lado;
     Double apotema;
 
-    public Hexagono()
-    {
-        super("",6,true);
-    }
+    public Hexagono() {}
 
-    public Hexagono(String nombre, int numero_lados, boolean regularidad, Double lado, Double apotema)
+    public Hexagono(Double lado, Double apotema)
     {
-        super(nombre,6, regularidad);
         this.lado = lado;
         this.apotema = apotema;
     }
@@ -21,10 +17,7 @@ public class Hexagono extends figuras_geometricas
     public Double getApotema() {return apotema;}
     public void setApotema(Double apotema) {this.apotema = apotema;}
 
-    public int getNumeroLados(){return numero_lados;}
-    public void setNumeroLados() {this.numero_lados = numero_lados;}
-
-    public double perimetroPentagono(){return lado*numero_lados;}
-    public Double areaPentagono(){return (perimetroPentagono()*apotema)/2;}
+    public double calcularPerimetro(){return lado*6;}
+    public Double calcularArea(){return (calcularPerimetro()*apotema)/2;}
 
 }

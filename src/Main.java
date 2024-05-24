@@ -1,6 +1,22 @@
 public class Main {
     public static void main(String[] args) {
 
+        Pentagono miFigura13 = new Pentagono();
+        Pentagono miFigura14 = new Pentagono(7.0, 3.0);
+        System.out.println("\nArea y Perimetro del Pentágono");
+        System.out.println("Area:");
+        System.out.println(miFigura14.calcularArea());
+        System.out.println("Perimetro:");
+        System.out.println(miFigura14.calcularPerimetro());
+
+        Hexagono miFigura15 = new Hexagono();
+        Hexagono miFigura16 = new Hexagono(15.0, 6.0);
+        System.out.println("\nArea y Perimetro del Hexágono");
+        System.out.println("Area:");
+        System.out.println(miFigura16.calcularArea());
+        System.out.println("Perimetro:");
+        System.out.println(miFigura16.calcularPerimetro());
+
         Heptagono miFigura3 = new Heptagono();
         Heptagono miFigura4 = new Heptagono(9.0, 4.0);
         System.out.println("\nArea y Perimetro del Heptagono");

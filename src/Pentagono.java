@@ -1,23 +1,18 @@
-public class Pentagono extends figuras_geometricas
+public class Pentagono extends FigurasGeo
 {
     Double lado;
     Double apotema;
 
-    public Pentagono()
-    {
-        super("", 5, true);
-    }
+    public Pentagono() {}
 
 
-    public Pentagono(String nombre, int numero_lados, boolean regularidad, Double lado, Double apotema)
+    public Pentagono(Double lado, Double apotema)
     {
-        super(nombre, numero_lados, regularidad);
         this.lado = lado;
         this.apotema = apotema;
     }
 
-    public int getNumeroLados() {return numero_lados;}
-    public void setNumeroLados() {this.numero_lados = numero_lados;}
+
 
     public double getLado() {return lado;}
 
@@ -27,7 +22,7 @@ public class Pentagono extends figuras_geometricas
 
     public void setApotema(Double apotema) {this.apotema = apotema;}
 
-    public double perimetroPentagono(){return lado*numero_lados;}
-    public Double areaPentagono(){return (perimetroPentagono()*apotema)/2;}
+    public double calcularPerimetro(){return lado*5;}
+    public Double calcularArea(){return (calcularPerimetro()*apotema)/2;}
 
 }
